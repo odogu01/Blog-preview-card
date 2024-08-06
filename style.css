@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+    --Yellow: hsl(47, 88%, 63%);
+    --White: hsl(0, 0%, 100%);
+    --Gray-500: hsl(0, 0%, 42%);
+    --Gray-950: hsl(0, 0%, 7%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    width: 100%;
+    background-color: var(--Yellow);
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    place-items: center;
+    grid-template-columns: minmax(auto, 350px)
+}
+.container {
+    height: auto;
+    background-color: var(--White);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px var(--Gray-950) groove;
+    box-shadow: 5px 5px;
+    font-family: "Figtree", sans-serif;
+    color: var(--Gray-950);
+    display: grid;
+    gap: 1rem;
+}
+.container img{
+    border-radius: 1rem;
+}
+.container button{
+    border: none;
+    background-color: var(--Yellow);
+    padding: 0.5rem;
+    font-weight: 600;
+    width: 25%;
+    text-align: center;
+    border-radius: 0.2rem;
+}
+.date{
+    font-size: 0.8rem;
+}
+.container h2{
+    color: var(--Yellow);
+}
+.text{
+    color: var(--Gray-500);
+    line-height: 1.5rem;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.profile img{
+    width: 32px;
+}
+.profile p{
+    font-weight: 800;
+}
+@media (max-width: 375px) {
+    .container{
+        grid-template-columns: minmax(auto, 270px);
+    }
+    .date {
+        font-size: 0.75rem;
+    }
+    .container h2{
+        font-size: 1.2rem;
+        color: black;
+        font-weight: 800;
+    }
+    .text {
+        font-size: 0.8rem;
+    }
+    .profile p{
+        font-size: 0.8rem;
+    }
+}
